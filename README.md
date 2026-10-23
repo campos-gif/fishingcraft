@@ -30,4 +30,10 @@ O workflow `.github/workflows/deploy-pages.yml` publica automaticamente cada env
 
 O jogo usa canvas 2D com aparência de blocos e profundidade simulada. `renderer.js` cuida do cenário e das animações; `visual.css`, da interface; `fishing.js`, do desafio de recolhimento. `index.html` integra movimento, inventário, loja e salvamento. Essa separação permite substituir o renderizador por 3D real futuramente sem reescrever a economia.
 
-Execute os testes de pesca com `node --test tests/fishing.test.cjs`.
+Execute os testes de pesca e integração com `node --test tests/*.test.cjs`.
+
+## Costa Voxel 0.4
+
+Perspectiva oblíqua, terreno em camadas, minimapa, inventário (tecla I), objetivos contextuais e feedback de captura. A tecla Esc fecha o inventário ou cancela a pesca. Os controles acompanham as direções da tela. `persistence.js` normaliza saves existentes sem mudar a chave v3; o progresso continua específico de cada navegador/endereço.
+
+O plano e as revisões dos agentes estão em [PLAN.md](PLAN.md). Para identificar a versão carregada, confira **COSTA VOXEL · 0.4** no canto da tela; recarregue uma aba antiga para receber o novo HTML.
